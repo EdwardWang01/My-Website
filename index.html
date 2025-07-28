@@ -1,47 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Edward Wang</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header>
-    <h1>Edward Wang</h1>
-    <p>Scientist • Builder • Curious Human</p>
-  </header>
+  <div class="page-container">
+    <div class="layout">
+      <!-- Static Left -->
+      <div class="intro-static">
+        <!-- Summary + Profile Pic -->
+        <img src="IMG_3670.jpg" alt="Edward Wang" class="profile-pic" />
+        <header>
+          <h4>Edward Wang</h4>
+          <h3>Jack of all, master of some</h3>
+          <p>I study genome disregulation in aging and cancer, from mechanisms to systems.</p>
+        </header>
+        <div class="toc">
+          <nav class="toc-nav">
+            <ul>
+              <li>
+                <a href="#about" id="toc-about" class="toc-link active">About</a>
+              </li>
+              <li>
+                <a href="#research" id="toc-research" class="toc-link">Research</a>
+              </li>
+              <li>
+                <a href="#projects" id="toc-projects" class="toc-link">Projects</a>
+              </li>
+              <li>
+                <a href="#skills" id="toc-skills" class="toc-link">Skills</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- Scrollable Right -->
+      <main class="scroll-content">
+        <section id="about" class="scrollsections">
+          <h2>About</h2>
+          <ul>
+            <li>
+              <strong>Mouse Tracker</strong><br />
+              A Python script that counts mouse clicks in 60 seconds.
+            </li>
+            <li>
+              <strong>5-Minute Mile Plan</strong><br />
+              Personal training program to cut mile time from 6:40 to sub-5.
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+            </li>
+          </ul>
+        </section>
+        <section id="research" class="scrollsections">
+          <h2>Research</h2>
+          <ul>
+            <li>
+              <strong>Tennis</strong><br />
+              Competitive player (UTR 8-9)
+            </li>
+            <li>
+              <strong>Writing</strong><br />
+              Substack reflections and short stories
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+            </li>
+          </ul>
+        </section>
+        <section id="projects" class="scrollsections">
+          <h2>Projects</h2>
+          <ul>
+            <li>
+              <strong>Goonin</strong><br />
+              A Python script that counts mouse clicks in 60 seconds.
+            </li>
+            <li>
+              <strong>Goonin2</strong><br />
+              Personal training program to cut mile time from 6:40 to sub-5.
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+            </li>
+          </ul>
+        </section>
+        <section id="skills" class="scrollsections">
+          <h2>Skills</h2>
+          <ul>
+            <li>
+              <strong>Goonin</strong><br />
+              A Python script that counts mouse clicks in 60 seconds.
+            </li>
+            <li>
+              <strong>Goonin2</strong><br />
+              Personal training program to cut mile time from 6:40 to sub-5.
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+            </li>
+            <li>
+              <h5>Coded in VS Code by yours truly using HTML/CSS. Loosely inspired by <a href="https://oblotzky.industries/products/gmk-cyl-dots-2">GMK CYL Dots 2</a>.</h5>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </div>
 
-  <section class="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <strong>Mouse Tracker</strong><br />
-        A Python script that counts mouse clicks in 60 seconds.
-      </li>
-      <li>
-        <strong>5-Minute Mile Plan</strong><br />
-        Personal training program to cut mile time from 6:40 to sub-5.
-      </li>
-    </ul>
-  </section>
+  <script>
+    let scrollLock = false;
+    
+    // Highlight TOC tab based on scroll position
+    const tocLinks = {
+      about: document.getElementById('toc-about'),
+      research: document.getElementById('toc-research'),
+      projects: document.getElementById('toc-projects'),
+      skills: document.getElementById('toc-skills')
+    };
+    const sections = {
+      about: document.getElementById('about'),
+      research: document.getElementById('research'),
+      projects: document.getElementById('projects'),
+      skills: document.getElementById('skills')
+    };
+    const scrollContent = document.querySelector('.scroll-content');
 
-    <section class="Hobbies">
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <strong>Tennis</strong><br />
-       Competitive player (UTR 8-9) 
-      </li>
-      <li>
-        <strong>Writing</strong><br />
-        Substack reflections and short stories
-      </li>
-    </ul>
-  </section>
+    function setActiveTab(tab) {
+      Object.values(tocLinks).forEach(link => link.classList.remove('active'));
+      tocLinks[tab].classList.add('active');
+    }
 
-  <footer>
-    <p>© 2025 Edward Wang • <a href="wang.edward01@gmail.com">Email me</a></p>
-  </footer>
+    function onScroll() {
+      if (scrollLock) return;
+
+      const scrollTop = scrollContent.scrollTop;
+      const buffer = 150;
+
+      let currentSection = null;
+
+      Object.entries(sections).forEach(([key, section]) => {
+        const top = section.offsetTop;
+        if (scrollTop + buffer >= top) {
+          currentSection = key;
+        }
+      });
+
+      if (currentSection) {
+        setActiveTab(currentSection);
+      }
+    }
+
+    scrollContent.addEventListener('scroll', onScroll);
+
+    // Smooth scroll on TOC click
+    Object.entries(tocLinks).forEach(([key, link]) => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+  
+        scrollLock = true;               // Lock scroll-based updates
+        setActiveTab(key);               // Manually set the tab now
+
+        sections[key].scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+
+    // Release the lock after 800ms (match scroll duration)
+        setTimeout(() => {
+          scrollLock = false;
+          onScroll(); // re-sync in case user stopped mid-scroll
+        }, 800);
+      });
+    });
+  </script>
 </body>
 </html>

@@ -4,35 +4,181 @@ body {
   padding: 0;
   background-color: #f9f9f9;
   color: #333;
+  font-size: 32px
+}
+
+.page-container {
+  width: 60vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+}
+
+.layout {
+  flex: 1;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
 
 header {
-  background-color: #222;
+  background-color: #000025;
   color: white;
   padding: 2rem;
+  text-align: right;
+}
+
+.intro-static {
+  width: 33.33%;
+  min-width: 0;
+  max-width: none;
+  background: #000025;
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1em 1em;
+  position: sticky;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 2em auto 1em auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toc {
+  margin-top: 2rem;
+  /* Align TOC left with summary */
+  padding-left: 0;
+}
+
+.toc-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toc-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-nav li {
+  margin-bottom: 1rem;
+}
+
+.toc-link {
+  position: relative;
+  text-decoration: none;
+  color: rgb(148, 163, 184);
+  font-weight: 500;
+  padding: 0.5rem 1rem 0.5rem 2rem; /* space for line */
+  border-radius: 4px;
+  display: block;
+  overflow: visible;
+  font-size: 1.5rem;
   text-align: center;
 }
 
-.projects {
+.toc-link:hover, .toc-link.active {
+  background: #000025;
+  color: #fff;
+  font-weight: 700;
+}
+
+.scroll-content {
+  flex: 1;
+  width: auto;
+  height: 100vh;
+  overflow-y: auto;
+  background: #000025;
+  color: #f5f5f5;
+  padding: 0.5em 2em;
+  box-sizing: border-box;
+  
+  /* Hide scrollbar for Chrome, Edge, Safari */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.scroll-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+h4 {
+  font-size: 3rem;
+  margin: 0;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.66rem;
+  margin: 1rem 0;
+  text-align: center;
+  font-weight: normal;
+}
+
+p {
+  font-size: 1.3rem;
+  color: rgb(148, 163, 184);
+  line-height: 1.5;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+h5 {
+  font-size: 0.7rem;
+  text-align: center;
+  font-weight: normal;
+}
+
+a {
+  color: rgb(220, 70, 82); /* example: bright gold */
+  text-decoration: none; /* optional: removes underline */
+}
+
+body {
+  background-color: #000025;
+  color: #f5f5f5;
+}
+
+.scrollsections {
   padding: 2rem;
 }
 
-.projects ul {
+.scrollsections ul {
   list-style: none;
   padding-left: 0;
 }
 
-.projects li {
-  background-color: white;
+.scrollsections li {
+  background-color: #000025;
   margin-bottom: 1rem;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  padding: 0rem;
+  /*border-radius: 8px;*/
+  /*box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);*/
+  /*border: 2px solid #fff;*/
+  color: #f5f5f5;
 }
 
 footer {
   text-align: center;
   padding: 2rem;
   font-size: 0.9rem;
-  background-color: #eee;
+  background-color: #000025;
 }
+
