@@ -1,17 +1,17 @@
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
-  color: #333;
+  color: #000025;
   font-size: 32px
 }
 
 .page-container {
-  width: 60vw;
-  margin-left: 20vw;
-  margin-right: 20vw;
-  min-height: 100vh;
+  margin-left: 15%;
+  margin-right: 15%;
+  min-height: 100%;
   display: flex;
   align-items: stretch;
 }
@@ -50,8 +50,8 @@ header {
 }
 
 .profile-pic {
-  width: 200px;
-  height: 200px;
+  width: 10rem;
+  height: 10rem;
   object-fit: cover;
   border-radius: 50%;
   display: block;
@@ -60,9 +60,7 @@ header {
 }
 
 .toc {
-  margin-top: 2rem;
-  /* Align TOC left with summary */
-  padding-left: 0;
+  margin-top: 1rem;
 }
 
 .toc-nav {
@@ -109,6 +107,7 @@ header {
   color: #f5f5f5;
   padding: 0.5em 2em;
   box-sizing: border-box;
+  font-size: 1rem;
   
   /* Hide scrollbar for Chrome, Edge, Safari */
   scrollbar-width: none; /* Firefox */
@@ -142,12 +141,13 @@ p {
 
 h5 {
   font-size: 0.7rem;
+  color: rgb(148, 163, 184);
   text-align: center;
   font-weight: normal;
 }
 
 a {
-  color: rgb(220, 70, 82); /* example: bright gold */
+  color: rgb(255,255,255); /* example: bright gold */
   text-decoration: none; /* optional: removes underline */
 }
 
@@ -182,3 +182,27 @@ footer {
   background-color: #000025;
 }
 
+/*In mobile / small window uses, makes intro section scroll directly into content and removes side margins*/
+@media (max-width: 1000px) {
+  .page-container {
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
+  .layout {
+    flex-direction: column;
+    height: auto;
+  }
+  .intro-static {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 2em 1em;
+  }
+  .scroll-content {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    padding: 2em 1em;
+  }
+}
