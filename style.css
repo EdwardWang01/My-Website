@@ -32,7 +32,7 @@ header {
 }
 
 .intro-static {
-  width: 33.33%;
+  width: 35%;
   min-width: 0;
   max-width: none;
   background: #000025;
@@ -98,6 +98,23 @@ header {
   font-weight: 700;
 }
 
+#toc-about.active {
+  background: #000025;   /* Dodger Blue */
+  color: #dc4652;
+}
+#toc-research.active {
+  background: #000025;   /* Green */
+  color: #7167a4;
+}
+#toc-projects.active {
+  background: #000025;   /* Orange */
+  color: #57c3ea;
+}
+#toc-skills.active {
+  background: #000025;   /* Pink */
+  color: #65b88a;
+}
+
 .scroll-content {
   flex: 1;
   width: auto;
@@ -119,7 +136,7 @@ header {
 }
 
 h4 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: 0;
   text-align: center;
 }
@@ -137,6 +154,10 @@ p {
   line-height: 1.5;
   margin: 1rem 0;
   text-align: center;
+}
+
+#about p {
+  text-align: left;
 }
 
 h5 {
