@@ -45,7 +45,7 @@ header {
   position: sticky;
   left: 0;
   top: 0;
-  height: 100vh;
+  height: 60vh;
   box-sizing: border-box;
 }
 
@@ -67,6 +67,8 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 40vh;
+  overflow-y: auto; /* allow scrolling if content overflows */
 }
 
 .toc-nav ul {
@@ -84,11 +86,10 @@ header {
   text-decoration: none;
   color: rgb(148, 163, 184);
   font-weight: 500;
-  padding: 0.5rem 1rem 0.5rem 2rem; /* space for line */
-  border-radius: 4px;
+  border-radius: 1vh;
   display: block;
   overflow: visible;
-  font-size: 1.5rem;
+  font-size: 2.5vh;
   text-align: center;
 }
 
@@ -136,23 +137,23 @@ header {
 }
 
 h4 {
-  font-size: 2.5rem;
+  font-size: 3.8vh;
   margin: 0;
   text-align: center;
 }
 
 h3 {
-  font-size: 1.66rem;
-  margin: 1rem 0;
+  font-size: 2.3vh;
+  margin: 0.5rem 0;
   text-align: center;
   font-weight: normal;
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 2vh;
   color: rgb(148, 163, 184);
   line-height: 1.5;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   text-align: center;
 }
 
@@ -161,7 +162,7 @@ p {
 }
 
 h5 {
-  font-size: 0.7rem;
+  font-size: 1vh;
   color: rgb(148, 163, 184);
   text-align: center;
   font-weight: normal;
@@ -196,13 +197,6 @@ body {
   color: #f5f5f5;
 }
 
-footer {
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  background-color: #000025;
-}
-
 /*In mobile / small window uses, makes intro section scroll directly into content and removes side margins*/
 @media (max-width: 1000px) {
   .page-container {
@@ -227,3 +221,4 @@ footer {
     padding: 2em 1em;
   }
 }
+
