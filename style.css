@@ -183,7 +183,7 @@ h2 {
 
 h3 {
   font-size: 1.8vh;
-  color: rgb(148, 163, 230);
+  color: #837ca3;
   line-height: 1.5;
   margin: 0.5vh 0;
   text-align: left;
@@ -199,7 +199,7 @@ p {
   text-align: center;
 }
 
-#about p, #education p, #projects p {
+#about p, #education p, #projects p, #research p {
   text-align: left;
 }
 
@@ -282,9 +282,36 @@ a {
 }
 
 /*Cell and Molecular Biology Skills*/
-.skill-tag1, .skill-tag2, .skill-tag3 {
+.skill-tag1 {
+    padding: 0.3vh 0.6vh;
+    background-color: #333434; /* slate-700 */
+    font-size: 1.5vh;
+    border-radius: 0.5vh;
+    color: #cbd5e1; /* slate-300 */
+    border: 0.2vh solid #475569; /* slate-600 */
+}
+
+.skill-tag2 {
     padding: 0.3vh 0.6vh;
     background-color: #334155; /* slate-700 */
+    font-size: 1.5vh;
+    border-radius: 0.5vh;
+    color: #cbd5e1; /* slate-300 */
+    border: 0.2vh solid #475569; /* slate-600 */
+}
+
+.skill-tag3 {
+    padding: 0.3vh 0.6vh;
+    background-color: #202050; /* slate-700 */
+    font-size: 1.5vh;
+    border-radius: 0.5vh;
+    color: #cbd5e1; /* slate-300 */
+    border: 0.2vh solid #475569; /* slate-600 */
+}
+
+.skill-tag4 {
+    padding: 0.3vh 0.6vh;
+    background-color: #000030; /* slate-700 */
     font-size: 1.5vh;
     border-radius: 0.5vh;
     color: #cbd5e1; /* slate-300 */
