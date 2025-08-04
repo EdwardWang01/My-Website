@@ -1,17 +1,18 @@
+/*webpage layout and background*/
 
-body {
+html, body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background-color: #000025;
   color: #000025;
-  font-size: 32px
+  height: 100%;
 }
 
 .page-container {
   margin-left: 15%;
   margin-right: 15%;
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: stretch;
 }
@@ -30,6 +31,8 @@ header {
   padding: 2rem;
   text-align: right;
 }
+
+/* Intro section (Left) */
 
 .intro-static {
   width: 35%;
@@ -50,24 +53,23 @@ header {
 }
 
 .profile-pic {
-  width: 10rem;
-  height: 10rem;
+  width: 20vh;
+  height: 20vh;
   object-fit: cover;
   border-radius: 50%;
   display: block;
-  margin: 2em auto 1em auto;
+  margin: 5vh auto 3vh auto;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .toc {
-  margin-top: 1rem;
+  margin-top: 0vh;
 }
 
 .toc-nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 40vh;
   overflow-y: auto; /* allow scrolling if content overflows */
 }
 
@@ -78,7 +80,7 @@ header {
 }
 
 .toc-nav li {
-  margin-bottom: 1rem;
+  margin: 2.8vh;
 }
 
 .toc-link {
@@ -86,9 +88,10 @@ header {
   text-decoration: none;
   color: rgb(148, 163, 184);
   font-weight: 500;
-  border-radius: 1vh;
+  border-radius: 2vh;
   display: block;
   overflow: visible;
+  /*same font size as major caption*/
   font-size: 2.5vh;
   text-align: center;
 }
@@ -99,22 +102,32 @@ header {
   font-weight: 700;
 }
 
+/*GMK dots color scheme*/
+
 #toc-about.active {
-  background: #000025;   /* Dodger Blue */
+  background: #000025;   
   color: #dc4652;
 }
 #toc-research.active {
-  background: #000025;   /* Green */
+  background: #000025;   
   color: #7167a4;
 }
-#toc-projects.active {
-  background: #000025;   /* Orange */
+
+#toc-education.active {
+  background: #000025;   
   color: #57c3ea;
 }
-#toc-skills.active {
-  background: #000025;   /* Pink */
+
+#toc-projects.active {
+  background: #000025;   
   color: #65b88a;
 }
+#toc-skills.active {
+  background: #000025;   
+  color: #fad260;
+}
+
+
 
 .scroll-content {
   flex: 1;
@@ -125,7 +138,6 @@ header {
   color: #f5f5f5;
   padding: 0.5em 2em;
   box-sizing: border-box;
-  font-size: 1rem;
   
   /* Hide scrollbar for Chrome, Edge, Safari */
   scrollbar-width: none; /* Firefox */
@@ -136,47 +148,149 @@ header {
   display: none; /* Chrome, Safari, Opera */
 }
 
-h4 {
+
+/* fonts */
+
+
+/*name*/
+h1 {
   font-size: 3.8vh;
   margin: 0;
   text-align: center;
 }
 
-h3 {
-  font-size: 2.3vh;
-  margin: 0.5rem 0;
+/*Scrollable section titles*/
+#about h1, #research h1, #education h1, #projects h1, #skills h1 {
+  font-size: 3vh;
+  font-weight: 600;
+  margin: 4vh 0;
+  text-align: left;
+}
+
+/*Major caption*/
+h2 {
+  font-size: 2.2vh;
+  margin: 1.5vh 0;
   text-align: center;
   font-weight: normal;
 }
 
-p {
-  font-size: 2vh;
-  color: rgb(148, 163, 184);
-  line-height: 1.5;
-  margin: 0.5rem 0;
-  text-align: center;
-}
-
-#about p {
+#research h2, #education h2, #projects h2, #skills h2 {
   text-align: left;
 }
 
-h5 {
+/* highlights / activities text*/
+
+h3 {
+  font-size: 1.8vh;
+  color: rgb(148, 163, 230);
+  line-height: 1.5;
+  margin: 0.5vh 0;
+  text-align: left;
+  font-weight: normal;
+}
+
+/*long content*/
+p {
+  font-size: 1.8vh;
+  color: rgb(148, 163, 184);
+  line-height: 1.5;
+  margin: 0.5vh 0;
+  text-align: center;
+}
+
+#about p, #education p, #projects p {
+  text-align: left;
+}
+
+/*really small font*/
+h6 {
   font-size: 1vh;
   color: rgb(148, 163, 184);
   text-align: center;
   font-weight: normal;
 }
 
+
+/* hyperlinks */
 a {
   color: rgb(255,255,255); /* example: bright gold */
   text-decoration: none; /* optional: removes underline */
 }
 
-body {
-  background-color: #000025;
-  color: #f5f5f5;
+
+/*About Section*/
+
+
+
+/*Research Section*/
+
+.period-icon {
+    width: 16px;
+    height: 16px;
 }
+
+.researchgroup-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.research-group {
+  font-size: 2vh;
+  font-weight: 500;
+  text-align: left;
+}
+
+.research-institution {
+  font-size: 2vh;
+  color: #fff;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/*Education Section*/
+
+.education-row, .research-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1vh 0;
+}
+
+.school-name, .research-name {
+  font-size: 2vh;
+  font-weight: 500;
+  text-align: left;
+}
+
+.education-period, .research-period {
+  font-size: 2vh;
+  color: #fff;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/*Skills Section*/
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8vh;
+}
+
+/*Cell and Molecular Biology Skills*/
+.skill-tag1, .skill-tag2, .skill-tag3 {
+    padding: 0.3vh 0.6vh;
+    background-color: #334155; /* slate-700 */
+    font-size: 1.5vh;
+    border-radius: 0.5vh;
+    color: #cbd5e1; /* slate-300 */
+    border: 0.2vh solid #475569; /* slate-600 */
+}
+
 
 .scrollsections {
   padding: 2rem;
@@ -189,13 +303,15 @@ body {
 
 .scrollsections li {
   background-color: #000025;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   padding: 0rem;
   /*border-radius: 8px;*/
   /*box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);*/
   /*border: 2px solid #fff;*/
   color: #f5f5f5;
 }
+
+
 
 /*In mobile / small window uses, makes intro section scroll directly into content and removes side margins*/
 @media (max-width: 1000px) {
