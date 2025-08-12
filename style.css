@@ -315,7 +315,7 @@ a {
 .pubs-icon {
     width: 2vh;
     height: 2vh;
-    color: #fad260; /* yellow-400 */
+    color: #65b88a; /* yellow-400 */
 }
 
 .pubs-title {
@@ -350,7 +350,61 @@ a {
 
 .pubs-list li::before {
     content: "•";
-    color: #fad260; /* blue-400 */
+    color: #65b88a; /* blue-400 */
+    margin-top: 0px;
+    flex-shrink: 0;
+}
+
+.presentations {
+    margin-top: 0px;
+}
+
+.pres-header {
+    display: flex;
+    align-items: center;
+    gap: 0.7vh;
+    margin-bottom: 0vh;
+}
+
+.pres-icon {
+    width: 2vh;
+    height: 2vh;
+    color: #57c3ea; /* yellow-400 */
+}
+
+.pres-title {
+    font-size: 1.8vh;
+    font-weight: 500;
+    color: #fff; 
+}
+
+.pres-list {
+    font-size: 1.8vh;
+    line-height: 2.5vh;
+    padding: 0;
+    margin-left: 2.9vh;
+}
+
+.pres-list li {
+    color: rgb(148, 163, 184) !important;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5vh;
+    margin-bottom: 0px;
+}
+
+.pres-list li .pub-citation {
+  /* make this a single flexible block inside the flex li */
+  flex: 1 1 auto;
+  min-width: 0;       /* important so it can shrink correctly inside flex */
+  white-space: normal;/* allow normal wrapping of the whole citation */
+  display: inline-block; /* keeps it inline visually but as a single flex child */
+}
+
+
+.pres-list li::before {
+    content: "•";
+    color: #57c3ea; /* blue-400 */
     margin-top: 0px;
     flex-shrink: 0;
 }
@@ -531,6 +585,22 @@ a {
   /*box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);*/
   /*border: 2px solid #fff;*/
   color: #f5f5f5;
+}
+
+#dna-background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 190vh; /* size of DNA circle */
+  height: 190vh;
+  background-image: url('cDNA.svg'); /* your image path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.15; /* faint */
+  transform: translate(-50%, -50%) rotate(0deg);
+  pointer-events: none; /* let clicks go through */
+  z-index: 0; /* stays behind content */
 }
 
 
