@@ -231,6 +231,12 @@ a {
 
 /*Research Section*/
 
+hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin: 3vh 0;
+}
+
 .period-icon {
     width: 16px;
     height: 16px;
@@ -384,6 +390,37 @@ a {
     padding: 0;
     margin-left: 2.9vh;
 }
+
+.presentations details {
+  margin-left: 2.9vh;
+  margin-bottom: 1vh;
+}
+
+.presentations summary {
+  font-size: 1.8vh;
+  font-weight: 500;
+  color: #57c3ea;
+  cursor: pointer;
+  list-style: none;
+  margin-bottom: 0.5vh;
+}
+
+.presentations summary::-webkit-details-marker {
+  display: none; /* hide default arrow */
+}
+
+.presentations summary::before {
+  content: "▸ "; /* custom arrow */
+  color: #57c3ea;
+  font-size: 1.6vh;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.presentations details[open] summary::before {
+  content: "▾ "; /* rotated arrow when open */
+}
+
 
 .pres-list li {
     color: rgb(148, 163, 184) !important;
