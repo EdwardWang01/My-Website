@@ -102,6 +102,26 @@ header {
   font-weight: 700;
 }
 
+.social-icons {
+  display: flex;
+  gap: 2vh;              /* space between icons */
+  justify-content: center;/* or left/right depending on your preference */
+  margin-top: 6vh;
+}
+
+.social-icons img {
+  width: 2vh;            /* small and minimal */
+  height: 2vh;
+  filter: invert(1);
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+.social-icons img:hover {
+  opacity: 1;
+}
+
+
 /*GMK dots color scheme*/
 
 #toc-about.active {
